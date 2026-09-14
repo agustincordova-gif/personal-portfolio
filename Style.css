@@ -1,95 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Agustin Cordova, an IT student learning programming and web development.">
-    <title>Agustin Cordova | Personal Portfolio</title>
+html {
+    scroll-behavior: smooth;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #222222;
+}
 
-<body>
+/* Header */
+header {
+    text-align: center;
+    background-color: #12355b;
+    color: white;
+    padding: 3rem 1rem;
+}
 
-<header>
-    <h1>Agustin Cordova</h1>
-    <p>IT Student | Learning Programming and Web Development</p>
-</header>
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
 
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+header p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
 
-<main>
+/* Navigation */
+nav {
+    background-color: #0b2545;
+    padding: 1rem;
+}
 
-    <section id="about">
-        <h2>About Me</h2>
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
 
-        <p>
-            I am an Information Technology student who is learning programming,
-            databases, and web development. I enjoy building simple projects
-            and improving my coding skills.
-        </p>
-    </section>
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    <section id="skills">
-        <h2>Skills</h2>
+nav a:hover {
+    color: #8ecae6;
+}
 
-        <ul>
-            <li>HTML</li>
-            <li>CSS Basics</li>
-            <li>Java</li>
-            <li>C Programming</li>
-            <li>Python</li>
-            <li>SQL and Database Management</li>
-            <li>Git and GitHub</li>
-        </ul>
-    </section>
+nav a:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 4px;
+}
 
-    <section id="projects">
-        <h2>Projects</h2>
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
 
-        <article>
-            <h3>Student Management System</h3>
+/* Sections */
+section {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-            <p>
-                A simple system for managing student information,
-                subjects, and grades. This project uses Java and MySQL.
-            </p>
-        </article>
+section h2 {
+    color: #12355b;
+    border-bottom: 2px solid #12355b;
+    padding-bottom: 0.5rem;
+}
 
-    </section>
+/* Skills */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    padding-left: 1.5rem;
+}
 
-    <section id="contact">
-        <h2>Contact</h2>
+/* Projects */
+#projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
 
-        <address>
-            <p>
-                Email:
-                <a href="mailto:agustincordovaiii@gmail.com">
-                    agustincordovaiii@gmail.com
-                </a>
-            </p>
+#projects article {
+    border: 1px solid #cccccc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
-            <p>
-                GitHub:
-                <a href="https://github.com/agustincordova-gif">
-                    Visit my GitHub profile
-                </a>
-            </p>
-        </address>
-    </section>
+#projects article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-</main>
+#projects article:focus-within {
+    outline: 3px solid #ffcc00;
+}
 
-<footer>
-    <p>&copy; 2026 Agustin Cordova. All rights reserved.</p>
-</footer>
+/* Links */
+a {
+    color: #0645ad;
+}
 
-</body>
-</html>
+a:hover {
+    color: #0b2545;
+}
+
+a:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 3px;
+}
+
+/* Contact */
+address {
+    font-style: normal;
+}
+
+address p {
+    margin: 0.8rem 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #0b2545;
+    color: white;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    section {
+        padding: 1.25rem;
+    }
+
+    #skills ul {
+        grid-template-columns: 1fr;
+    }
+}
